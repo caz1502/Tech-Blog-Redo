@@ -1,8 +1,8 @@
-<nav class="navbar navbar-dark bg-dark navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-light">
     <div class="container-fluid d-flex justify-content-between w-100">
         <a class="navbar-brand m-0" href="/">The Tech-Blog</a>
     {{#if logged_in}}
-    <h2 class="text-light m-0 w-100 text-center ps-5 ms-5">Greetings, {{username}}!</h2>
+    <h2 class="text-dark m-0 w-100 text-center ps-5 ms-5">Greetings, {{username}}!</h2>
     {{/if}}
         <div class=" d-flex justify-content-center" id="navbarNav">
             <ul class="navbar-nav">
@@ -28,7 +28,7 @@
 
 <!-- Trigger the modal -->
 <div class="d-flex justify-content-center align-items-center my-5">
-<button type="button" class="btn btn-outline-secondary text-white" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+<button type="button" class="btn text-white" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
   New post
 </button>
 </div>
@@ -52,8 +52,8 @@
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <button type="button" class="btn text-white " data-bs-dismiss="modal">Close</button>
+                    <button type="submit" class="btn text-white ">Submit</button>
                 </div>
             </form>
         </div>
@@ -66,7 +66,7 @@
     <div class="row row-cols-1">
         {{#each posts as |post|}}
         <div class="col align-self-center py-3 d-flex justify-content-center">
-            <div class="card w-50 text-white bg-secondary border-light">
+            <div class="card w-50 text-white  border-light">
                 <div class="card-header">
                     <a class="link-light" href="/post/{{id}}">{{name}}</a>
                 </div>
@@ -75,7 +75,7 @@
                      <p>{{description}}</p>
                     </blockquote>
                     <div class="d-flex justify-content-end">
-                      <button class="btn btn-sm btn-danger" data-id="{{post.id}}">Delete</button>
+                      <button class="btn btn-md text-white" data-id="{{post.id}}">Delete</button>
                     </div>
                 </div>
             </div>
